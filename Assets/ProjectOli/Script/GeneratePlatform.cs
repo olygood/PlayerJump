@@ -17,8 +17,9 @@ public class GeneratePlatform : MonoBehaviour
     {
         for (int i = 0; i < 15; i++)
         {
-            Instantiate(platform, new Vector3(((float)Random.value * 20) - 10, (float)platformHeight, 0f), Quaternion.identity);
+            Instantiate(platform, new Vector3(((float)Random.value * 16) - 8, (float)platformHeight, 0f), Quaternion.identity);
             platformHeight += spaceBetweenPlatforms;
+
         }
 	}
 	
@@ -29,7 +30,11 @@ public class GeneratePlatform : MonoBehaviour
         {
             Instantiate(platform, new Vector3(((float)Random.value * 16) - 8, (float)platformHeight, 0f), Quaternion.identity);
             platformHeight += spaceBetweenPlatforms;
-            spaceBetweenPlatforms += 0.2f;
+            if(spaceBetweenPlatforms <8f)
+            {
+                spaceBetweenPlatforms += 0.2f;
+            }
+            
         }
 	}
 }

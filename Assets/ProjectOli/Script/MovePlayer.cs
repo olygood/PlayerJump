@@ -5,7 +5,8 @@ using UnityEngine;
 public class MovePlayer : MonoBehaviour
 {
     public float unitePerSec = 1f;
-    private Vector3 newVelocity = Vector3.zero;
+    public Vector3 newVelocity = Vector3.zero;
+
 
 
 
