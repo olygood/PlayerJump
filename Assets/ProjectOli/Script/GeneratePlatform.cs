@@ -27,7 +27,7 @@ public class GeneratePlatform : MonoBehaviour
     {
 		if(platformHeight - player.transform.position.y <=15f || player.transform.position.y >150f)
         {
-            Instantiate(platform, new Vector3(((float)Random.value * 20) - 10, (float)platformHeight, 0f), Quaternion.identity);
+            Instantiate(platform, new Vector3(((float)Random.value * 16) - 8, (float)platformHeight, 0f), Quaternion.identity);
             platformHeight += spaceBetweenPlatforms;
             spaceBetweenPlatforms += 0.2f;
         }
